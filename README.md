@@ -3,6 +3,9 @@
 A modern **Student Management System** built with **PHP**, **MySQL**, **HTML**, **CSS**, and **JavaScript**. This project allows users to securely manage student records with authentication and a clean user interface.
 
 ---
+🔗 **Live Website:** https://studentkd63.wuaze.com
+
+---
 
 ## 🚀 Features
 
