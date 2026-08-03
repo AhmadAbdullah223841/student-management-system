@@ -1,0 +1,414 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+
+--accent:#00ffff;
+--accent:#008b8b;
+--accent:#00ff00;
+--accent:#bb86fc;
+
+
+--bg:#020617;
+--bg2:#0f172a;
+--bg3:#111827;
+
+--text:#ffffff;
+
+--card:rgba(30,41,59,.65);
+
+--input:#111827;
+
+--table:#1e293b;
+
+--button:#00ffff;
+--button2:#00ff88;
+--buttonText:#000;
+
+--hover:#334155;
+
+}
+
+/* ================= LIGHT ================= */
+
+body.light{
+
+--bg:#f2f2f2;
+--bg2:#ffffff;
+--bg3:#e8e8e8;
+
+--text:#000;
+
+--card:#ffffff;
+
+--input:#ffffff;
+
+--table:#ffffff;
+
+--button:#008b8b;
+--button2:#00b894;
+--buttonText:#fff;
+
+--hover:#dfe6e9;
+
+}
+
+/* ================= MATRIX ================= */
+
+body.matrix{
+
+--bg:#000;
+--bg2:#001100;
+--bg3:#002200;
+
+--text:#00ff00;
+
+--card:#001100;
+
+--input:#001100;
+
+--table:#001100;
+
+--button:#00ff00;
+--button2:#00cc00;
+--buttonText:#000;
+
+--hover:#003300;
+
+}
+
+/* ================= PURPLE ================= */
+
+body.purple{
+
+--bg:#1b1036;
+--bg2:#24124d;
+--bg3:#2d1b69;
+
+--text:#fff;
+
+--card:#2d1b69;
+
+--input:#24124d;
+
+--table:#2d1b69;
+
+--button:#bb86fc;
+--button2:#9b59b6;
+--buttonText:#000;
+
+--hover:#4b2d7f;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(
+135deg,
+var(--bg),
+var(--bg2),
+var(--bg3)
+);
+
+background-size:400% 400%;
+
+animation:bgMove 10s ease infinite;
+
+color:var(--text);
+
+padding:40px;
+
+transition:.4s;
+
+}
+
+@keyframes bgMove{
+
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+
+}
+
+h2{
+
+color:var(--accent);
+
+text-shadow:
+
+0 0 10px var(--accent),
+
+0 0 20px var(--accent),
+
+0 0 40px var(--accent);
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+
+}
+
+form{
+
+    width:500px;
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:var(--card);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,255,255,.4);
+
+    box-shadow:
+
+    0 0 15px var(--accent),
+    0 0 35px var(--accent);
+
+    transition:.5s;
+
+}
+
+form:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 0 25px var(--button2),
+    0 0 60px var(--button2);
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:12px;
+
+    background:var(--input);
+
+    border:2px solid transparent;
+
+    color:var(--text);
+
+    border-radius:10px;
+
+    transition:.4s;
+
+}
+
+input:hover,
+select:hover{
+
+    border-color:var(--accent);
+
+}
+
+input:focus,
+select:focus{
+
+    border-color:var(--button2);
+
+    box-shadow:
+
+    0 0 10px var(--button2),
+    0 0 20px var(--button2);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+    45deg,
+    var(--button),
+    var(--button2)
+    );
+
+color:var(--buttonText);
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+    0 0 15px var(--button2),
+    0 0 30px var(--button2),
+    0 0 60px var(--button2);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ================= TABLE DESIGN ================= */
+
+table{
+
+    width:100%;
+    margin-top:40px;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+
+    background:var(--table);
+
+    box-shadow:
+    0 0 20px var(--accent),
+    0 0 40px var(--accent);
+
+}
+
+th{
+
+    background:var(--button);
+    color:var(--buttonText);
+    padding:15px;
+    text-align:left;
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+td{
+
+    padding:14px;
+    color:var(--text);
+    background:var(--table);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+
+}
+
+/* সব Row একই Dark থাকবে */
+
+tr:nth-child(odd) td{
+
+background:var(--table);
+
+}
+
+tr:nth-child(even) td{
+
+background:var(--table);
+
+}
+/* Hover করলে Glow হবে */
+
+tr:hover td{
+
+background:var(--hover)!important;
+
+color:var(--accent);
+
+transition:.3s;
+
+}
+
+/* Image */
+
+.person-photo{
+
+    width:50px;
+    height:50px;
+    object-fit:cover;
+    border-radius:8px;
+    border:2px solid var(--accent);
+
+}
+
+/* Pagination */
+
+button{
+
+    cursor:pointer;
+
+}
+
+.dashboard{
+
+    width:520px;
+
+    margin:80px auto;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+
+    0 0 25px var(--accent),
+    0 0 60px rgba(0,255,255,.4);
+
+    animation:float 3s infinite;
+
+}
+
+::selection{
+
+    background:var(--accent);
+
+    color:black;
+
+}
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+
+    border-radius:20px;
+
+    box-shadow:0 0 15px var(--accent);
+
+}
