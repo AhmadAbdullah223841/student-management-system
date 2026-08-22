@@ -61,33 +61,6 @@ Alice/
 ├── style.css
 └── README.md
 ```
-
----
-
-## ⚙️ Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/AhmadAbdullah223841/student-management-system.git
-```
-
-2. Move the project into your **htdocs** folder.
-
-3. Create a MySQL database.
-
-4. Import the SQL file.
-
-5. Update your database credentials inside **db.php**.
-
-6. Start **Apache** and **MySQL** from XAMPP.
-
-7. Open your browser and visit:
-
-```text
-http://localhost/Alice
-```
-
 ---
 
 ## 🔐 Security Features
@@ -133,4 +106,4 @@ https://github.com/AhmadAbdullah223841
 
 ---
 
-⭐ If you like this project, don't forget to **Star** the repository!
+⭐ If you like this project, don't forget to **Star** the repository! Don't worry, it's free.
