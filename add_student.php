@@ -1,18 +1,14 @@
 <?php
 session_start();
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])){
     header("Location: login.php");
     exit();
 }
-
 include "db.php";
 $message = "";
-
 if(isset($_POST['add'])){
     // SQL Injection থেকে বাঁচতে ডেটা এস্কেপ করা হলো
     $name = mysqli_real_escape_string($conn, $_POST['name']);
