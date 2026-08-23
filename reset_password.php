@@ -1,47 +1,30 @@
 <?php
 session_start();
-
 include "db.php";
-
 // OTP Verify না হলে এখানে আসতে পারবে না
 if (!isset($_SESSION['reset_email']) || !isset($_SESSION['otp_verified'])) {
     header("Location: forgot_password.php");
     exit();
 }
-
 $message = "";
 $email = $_SESSION['reset_email'];
-
 if (isset($_POST['reset'])) {
-
     $password = trim($_POST['password']);
     $confirm  = trim($_POST['confirm_password']);
-
     // Empty Check
     if (empty($password) || empty($confirm)) {
-
         $message = "<span style='color:red;font-weight:bold;'>All fields are required!</span>";
-
     }
-
     // Minimum Password Length
     elseif (strlen($password) < 6) {
-
         $message = "<span style='color:red;font-weight:bold;'>Password must be at least 6 characters!</span>";
-
     }
-
     // Password Match
     elseif ($password !== $confirm) {
-
         $message = "<span style='color:red;font-weight:bold;'>Passwords do not match!</span>";
-
     }
-
     else {
-
         $hash = password_hash($password, PASSWORD_DEFAULT);
-
         $update = mysqli_query($conn,"
             UPDATE userss
             SET
