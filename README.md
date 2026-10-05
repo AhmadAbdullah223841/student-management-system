@@ -34,7 +34,6 @@ A modern **Student Management System** built with **PHP**, **MySQL**, **HTML**, 
 * JavaScript
 * XAMPP
 * PHPMailer
-* Google Gemini API (AI Integration)
 
 ---
 
